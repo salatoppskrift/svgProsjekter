@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Svg-øving</title>
+</head>
+
+<body>
+    <h1>Svger I suppose</h1>
+    <p></p>
+</body>
+<script>
+    const pEl = document.querySelector("p");
+
+    fetch("./svgs.json")
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(svg => {
+                const spanEl = document.createElement("span");
+                spanEl.innerHTML = svg.content;
+                pEl.append(spanEl);
+            });
+        });
+</script>
+
+</html>
