@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>3D Cube - Demo</title>
+    <style>
+        :root {
+            --standard-width: 60vw;
+            --radius: 18vw;
+            --standard-height: calc(var(--radius) * 2);
+        }
+        
+        body {
+            background: #3c7069;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .scene {
+            perspective: 100%;
+            width: calc(var(--standard-width) - 2rem);
+            height: calc(var(--standard-height) - 2rem);
+            margin: 100px auto;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 2s;
+            transform-origin: 50% 50% 0;
+            transform: rotateY(90deg);
+        }
+
+        /*
+        .cube:hover {
+        */
+        /* .cube {
+            transform: rotateX(-10deg) rotateY(45deg);
+        } */
+
+        .cube:hover {
+            transform: rotateX(-10deg) rotateY(45deg);
+        }
+
+        /* .cube:hover {
+        transform: rotateX(180deg);
+      } */
+        .face {
+            position: absolute;
+            width: var(--standard-width);
+            height: var(--standard-height);
+            background: rgba(219, 194, 52, 0.6);
+            border: 1px solid #f2f3a9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        
+        /*
+        .x {
+          width: var(--standard-height); transform: translateX(calc(var(--radius) / 2));
+        }
+        */
+
+        .y {
+            width: var(--standard-height); 
+            transform: rotateY(90deg) translateZ(calc(var(--radius) / 1.5));
+            /*
+            transform: translateX(cal(var(--standard-width) / 2));
+            */
+        }
+
+        .back {
+            transform: rotateY(180deg) translateZ(var(--radius));
+        }
+        .left {
+            transform: rotateY(-90deg) translateZ(var(--radius));
+        }
+
+        .top {
+            transform: rotateX(90deg) translateZ(var(--radius));
+        }
+
+        .bottom {
+            transform: rotateX(-90deg) translateZ(275px);
+            height: var(--radius); /*bottomface; must be harmonious with width*/
+        }
+
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .toes {
+            transform: rotateY(90deg) translateZ(calc(var(--radius) * -0.5)) translateY(calc(var(--radius) * 1.925));
+            width: calc(var(--standard-height) / 2);
+            height: calc(var(--standard-height) * 0.03);
+            background: rgba(109, 204, 102, 0.6); /*green*/
+        }
+
+        .leg {
+            transform: rotateY(90deg) translateZ(calc(var(--radius) * 1.455)) translateY(calc(var(--radius) * -0.49));
+            width: var(--radius);
+        }
+        .leg2 {
+            transform: rotateY(90deg) translateZ(calc(var(--radius) * 2.47)) translateY(calc(var(--radius) * -0.49));
+        }
+        .right {
+            transform: translateX(calc(var(--radius) * 1.965)) translateZ(calc(var(--radius) * .5)) translateY(calc(var(--radius) / -2.05));
+        }
+        
+        .front2 {
+            transform: rotateY(90deg) rotateX(-78deg) translateY(calc(var(--radius) * -0.315)) translateZ(calc(var(--radius) * 0.80));
+            width: calc(var(--standard-height) / 2);
+            /*
+            transform: translateZ(var(--radius)) translateY(var(--standard-height));
+            */
+        }
+
+        .right2 {
+            transform: rotateY(90deg) translateZ(100px) translateY(var((--standard-height)));
+        }
+        /*  */
+        @media (prefers-reduced-motion: reduce) {
+            .cube {
+                transition: none;
+                transform: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="scene">
+        <div class="cube">
+            <!-- <div class="face x">x</div> -->
+            <!-- <div class="face y">y</div> -->
+            <div class="face leg">y</div>
+            <div class="face leg right">Right</div>
+            <div class="face leg leg2">y</div>
+            <div class="face toes">toes</div>
+            <div class="face y front2">front</div>
+            <div class="face bottom">buttom</div>
+        </div>
+        <div class="cube">
+            <div></div>
+        </div>
+    </div>
+    <div class="scene"></div>
+</body>
+<script>
+    Object.values(document.getElementsByClassName("scene")).map((scene, i, arr) => {
+        console.log(`Det er ${arr.length} scene${arr.length === 1 ? '' : 'r'}. ${scene.children.length === 0 ? 'Denne scenen har ikke innhold.' : 'Denne scenen har ' + Object.values(scene.children).map(child => child.children.length).reduce((prV, cV) => prV + cV) + ' barn.'}`);
+    })
+</script>
+
+</html>
