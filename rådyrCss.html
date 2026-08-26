@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+  /*
+  --h: calc(100vw * 0.8);
+  */
+  --h: 300px;
+  --w: 100vw;
+  --wW: 100vw * 0.5;
+}
+* {
+  padding: 0; margin: 0;
+}
+div.container {
+  width: var(--w);
+  height: var(--h);
+  position: relative;
+  opacity: 100%;
+  background-color: pink;
+  &:has(svg) {
+    inline-block: block;
+    background-color: aliceblue;
+    border: cadetblue 2px solid;
+  }
+}
+div.container {
+> svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 80%;
+}
+> img {
+  height: 100%;
+  transform: translateY(-10px);
+  position: absolute;
+  filter: contrast(0.8) brightness(1.2);
+  opacity: 40%;
+}
+> svg.hat {
+  background-color: lightgray;
+  clip-path: polygon(
+    calc(var(--wW) - (var(--h) * 0.3)) 60%,
+    calc(var(--wW)) 75%,
+    calc(var(--wW) + (var(--h) * 0.095)) 50%
+  );
+}
+> svg.deer {
+  background-color: skyblue;
+  clip-path: polygon(
+    calc(var(--wW) - (var(--h) * 0.5))
+      100%, /*1*/
+      
+    calc(var(--wW) - (var(--h) * 0.5))
+      35%,  /*2*/
+      
+    calc(var(--wW) - (var(--h) * 0.25))
+      30%,  /*3*/
+    
+    calc(var(--wW))
+      35%,  /*4*/
+      
+    calc(var(--wW) + (var(--h) * 0.035))
+      34%,  /*5*/
+      
+    calc(var(--wW) + (var(--h) * 0.07))
+      35%,  /*5.1*/
+    
+    calc(var(--wW) + (var(--h) * 0.145))
+      27%,  /*5.2*/
+    
+    calc(var(--wW) + (var(--h) * 0.165))
+      20%,  /*5.3*/
+    
+    calc(var(--wW))
+      0%,   /*6*/
+    
+    calc(var(--wW) + (var(--h) * 0.5))
+      0%,   /*7*/
+    
+    calc(var(--wW) + (var(--h) * 0.5))
+      100%  /*8*/
+  );
+}
+}
+
+</style>
+</head>
+<body>
+
+<h1>The polygon() Function</h1>
+
+<div class="container">
+  <img src="paris.jpg" alt="Reference image">
+  <svg class="deer"></svg>
+  <!--<svg class="hat"></svg>-->
+</div>
+<span>gg</span>
+<div style="background-color: plum; width: 56px; height: 20px;">gg</div>
+<button>Change polygon points</button>
+<div class="deer2"></div>
+
+<script>
+const str = `polygon(
+    calc(var(--wW) - (var(--h) * 0.3)) 60%,
+    calc(var(--wW)) 75%,
+    calc(var(--wW) + (var(--h) * 0.095)) 50%
+  `;
+
+document.getElementsByTagName("button")[0].addEventListener("click", () => { document.getElementsByClassName("deer")[0].style.clipPath = str; });
+</script>
+</body>
+</html>
