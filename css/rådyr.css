@@ -8,6 +8,7 @@
   padding: 0;
   margin: 0;
 }
+
 body {
   background-color: #c2ae96;
 }
@@ -23,6 +24,7 @@ div#widthSize {
   &:has(.warm) {
     background-color: hsl(86, 31%, 57%);
   }
+
   &:has(.veryWarm) {
     background-color: hsl(87, 55%, 70%);
   }
@@ -62,50 +64,176 @@ div.container {
     height: 100%;
     width: 100%;
     position: absolute;
-    opacity: 50%;
+    opacity: 75%;
   }
 
   >svg.hat {
-    background-color: lightgray;
-    clip-path: polygon(calc(var(--wW) - (var(--h) * 0.3)) 60%,
-        calc(var(--wW)) 75%,
-        calc(var(--wW) + (var(--h) * 0.095)) 50%);
+    background-color: darkolivegreen;
+    clip-path: polygon(
+        /*behind LEFT ear*/
+        calc(var(--wW) + (var(--h) * 0.15)) 20%,
+        calc(var(--wW) + (var(--h) * 0.18)) 11%,
+        /*TOP OF HAT*/
+        calc(var(--wW) + (var(--h) * 0.265)) 7%,
+        /*OUTER RIGHT TIP OF HAT*/
+        calc(var(--wW) + (var(--h) * 0.35)) 14%,
+        calc(var(--wW) + (var(--h) * 0.3)) 13%,
+        calc(var(--wW) + (var(--h) * 0.24)) 13.2%
+        /*END*/
+      );
+  }
+
+  >svg.deerLeg {
+    background-color: lightblue;
+    clip-path: polygon(
+        /*OUTER PATELLA*/
+        calc(var(--wW) - (var(--h) * 0.35)) 65.6%,
+        calc(var(--wW) - (var(--h) * 0.36)) 67.5%,
+        calc(var(--wW) - (var(--h) * 0.355)) 69.7%,
+
+        /*SESAMOID BEHIND*/
+        calc(var(--wW) - (var(--h) * 0.205)) 88%,
+
+        /*TOE TIP*/
+        calc(var(--wW) - (var(--h) * 0.19)) 93%,
+        calc(var(--wW) - (var(--h) * 0.177)) 91.8%,
+
+        /*SESAMOID FRONT*/
+        calc(var(--wW) - (var(--h) * 0.185)) 87%,
+
+        /*INNER PATELLA*/
+        calc(var(--wW) - (var(--h) * 0.3)) 72.5%,
+        calc(var(--wW) - (var(--h) * 0.28)) 65%,
+        calc(var(--wW) - (var(--h) * 0.2)) 53%,
+        calc(var(--wW) - (var(--h) * 0.29)) 53%,
+        calc(var(--wW) - (var(--h) * 0.282)) 57%,
+        calc(var(--wW) - (var(--h) * 0.285)) 59%,
+        calc(var(--wW) - (var(--h) * 0.29)) 60.5%
+      )
   }
 
   >svg.deer {
     background-color: skyblue;
-    clip-path: polygon(calc(var(--wW) - (var(--h) * 0.5)) 100%,
-        /*1*/
+    clip-path: polygon(
+        /*right back toe (closest to us)*/
+        calc(var(--wW) - (var(--h) * 0.205)) 97.8%,
+        calc(var(--wW) - (var(--h) * 0.225)) 98%,
 
-        calc(var(--wW) - (var(--h) * 0.5)) 35%,
+        /*calcenaeus BACK*/
+        calc(var(--wW) - (var(--h) * 0.34)) 68%,
+
+        /*carpals*/
+        calc(var(--wW) - (var(--h) * 0.27)) 62%,
+        calc(var(--wW) - (var(--h) * 0.268)) 60%,
+        calc(var(--wW) - (var(--h) * 0.275)) 57%,
+
+        /*TAIL BOTTOM*/
+        calc(var(--wW) - (var(--h) * 0.335)) 44.6%,
+        calc(var(--wW) - (var(--h) * 0.345)) 44%,
+        calc(var(--wW) - (var(--h) * 0.359)) 42.5%,
+        calc(var(--wW) - (var(--h) * 0.366)) 40%,
+        calc(var(--wW) - (var(--h) * 0.362)) 38%,
+        calc(var(--wW) - (var(--h) * 0.35)) 36%,
         /*2*/
 
-        calc(var(--wW) - (var(--h) * 0.25)) 30%,
-        /*3*/
+        calc(var(--wW) - (var(--h) * 0.324)) 33.2%,
 
-        calc(var(--wW)) 35%,
-        /*4*/
+        calc(var(--wW) - (var(--h) * 0.29)) 30.4%,
+        calc(var(--wW) - (var(--h) * 0.27)) 29%,
+        calc(var(--wW) - (var(--h) * 0.263)) 28.9%,
+        /*END TAIL SECTION: TOP*/
 
-        calc(var(--wW) + (var(--h) * 0.035)) 34%,
-        /*5*/
+        calc(var(--wW) - (var(--h) * 0.24)) 27.2%,
+        /*TAIL BUTT: AMEND*/
 
-        calc(var(--wW) + (var(--h) * 0.07)) 35%,
-        /*5.1*/
+        /*BUTT SECTION*/
+        calc(var(--wW) - (var(--h) * 0.209)) 25.25%,
+        calc(var(--wW) - (var(--h) * 0.184)) 24.87%,
+        /*END BUTT SECTION*/
 
-        calc(var(--wW) + (var(--h) * 0.145)) 27%,
-        /*5.2*/
+        /*SHOULDER START*/
+        calc(var(--wW) + (var(--h) * 0.013)) 29.1%,
+        /*SHOULDER TOP*/
+        calc(var(--wW) + (var(--h) * 0.058)) 28.28%,
+        calc(var(--wW) + (var(--h) * 0.064)) 28.26%,
+        /*SHOULDER BEND DOWN TO*/
+        calc(var(--wW) + (var(--h) * 0.076)) 28.7%,
+        /*SHOULDER TOP THROAT START: AMEND*/
+        /*THROAT BASE*/
+        calc(var(--wW) + (var(--h) * 0.0905)) 29.5%,
 
-        calc(var(--wW) + (var(--h) * 0.165)) 20%,
-        /*5.3*/
+        calc(var(--wW) + (var(--h) * 0.094)) 29.45%,
 
-        calc(var(--wW)) 0%,
-        /*6*/
+        /*NECK MIDDLE*/
+        calc(var(--wW) + (var(--h) * 0.145)) 25.3%,
 
-        calc(var(--wW) + (var(--h) * 0.5)) 0%,
-        /*7*/
+        /*SKULL BASE*/
+        calc(var(--wW) + (var(--h) * 0.168)) 21.8%,
 
-        calc(var(--wW) + (var(--h) * 0.5)) 100%
-        /*8*/
+        calc(var(--wW) + (var(--h) * 0.18)) 18%,
+        /*UNDER HAT*/
+
+        /*NO LEFT EAR BASE BOTTOM AS OF YET*/
+
+        /*EAR LEFT TIP TOP*/
+        calc(var(--wW) + (var(--h) * 0.23)) 0.14%,
+
+        /*BETWEEN EARS*/
+        calc(var(--wW) + (var(--h) * 0.25)) 11%,
+        calc(var(--wW) + (var(--h) * 0.3)) 10%,
+
+        /*EAR RIGHT TIP TOP*/
+        calc(var(--wW) + (var(--h) * 0.367)) 4%,
+        calc(var(--wW) + (var(--h) * 0.371)) 5.5%,
+        /*EAR RIGHT END BASE*/
+        calc(var(--wW) + (var(--h) * 0.3)) 13.2%,
+
+        /*FACE DIP*/
+        calc(var(--wW) + (var(--h) * 0.32)) 19%,
+
+        /*SNOUT SECTION*/
+        calc(var(--wW) + (var(--h) * 0.358)) 23%,
+        calc(var(--wW) + (var(--h) * 0.363)) 24.5%,
+        calc(var(--wW) + (var(--h) * 0.36)) 25%,
+        calc(var(--wW) + (var(--h) * 0.345)) 25.65%,
+        /*END SNOUT SECTION*/
+
+        /*MOUTH*/
+        calc(var(--wW) + (var(--h) * 0.335)) 26.2%,
+        /*UNDERSIDE OF JAW*/
+        calc(var(--wW) + (var(--h) * 0.295)) 25.5%,
+        calc(var(--wW) + (var(--h) * 0.273)) 26%,
+        calc(var(--wW) + (var(--h) * 0.263)) 26.9%,
+
+        /*THROAT START*/
+        calc(var(--wW) + (var(--h) * 0.167)) 50.5%,
+        calc(var(--wW) + (var(--h) * 0.155)) 52%,
+
+        /*ELBOW CHEST FRONT BASE*/
+        calc(var(--wW) + (var(--h) * 0.03)) 59%,
+
+        /*RIGHT FRONT TOE*/
+        calc(var(--wW) + (var(--h) * 0.015)) 99.5%,
+        var(--wW) 99.5%,
+
+        /*ELBOW BOWL BASE*/
+        calc(var(--wW) - (var(--h) * 0.043)) 57%,
+
+        /*BELLY SECTION*/
+        calc(var(--wW) - (var(--h) * 0.04)) 54%,
+        calc(var(--wW) - (var(--h) * 0.13)) 49.8%,
+        /*END BELLY SECTION*/
+
+        /*INNER PELVIS*/
+        calc(var(--wW) - (var(--h) * 0.155)) 51%,
+
+        /*PATELLA*/
+        calc(var(--wW) - (var(--h) * 0.156)) 55%,
+        calc(var(--wW) - (var(--h) * 0.156)) 58%,
+        calc(var(--wW) - (var(--h) * 0.18)) 62%,
+        calc(var(--wW) - (var(--h) * 0.242)) 66%,
+        calc(var(--wW) - (var(--h) * 0.27)) 70%,
+        calc(var(--wW) - (var(--h) * 0.275)) 74%
       );
   }
 }
