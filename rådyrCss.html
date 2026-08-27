@@ -10,7 +10,7 @@
 
 <body>
 
-  <h1>The polygon() Function</h1>
+  <h1>The Deer() Function</h1>
 
   <div class="container">
     <img src="bilder/rådyrpåtur.jpg" alt="Reference image">
@@ -18,22 +18,30 @@
     <!--<svg class="hat"></svg>-->
   </div>
   <span>gg</span>
-  <div style="background-color: plum; width: 56px; height: 20px;">gg</div>
+  <div id="widthSize"></div>
   <button>Change polygon points</button>
   <div class="deer2"></div>
 
-  <script>
-    const str = `polygon(
-    calc(var(--wW) - (var(--h) * 0.3)) 60%,
-    calc(var(--wW)) 75%,
-    calc(var(--wW) + (var(--h) * 0.095)) 50%
-    `;
-    const origStr = document.getElementsByClassName("deer")[0].style.clipPath;
-
-    console.log("hey?\n" + origStr);
-
-    document.getElementsByTagName("button")[0].addEventListener("click", () => { document.getElementsByClassName("deer")[0].style.clipPath = str; });
-  </script>
 </body>
+<script>
+  const updateSizeText = w => {
+    const goal = 970;
+    let spanText = ``;
+    console.log("meme");
+    if (window.innerWidth === goal) spanText = `<span class="correct">Riktig!!</span>`;
+    else if (window.innerWidth > 950 && window.innerWidth < 990) spanText = `<span class="warm">Varmere... ${goal - window.innerWidth}</span>`;
+    else spanText = `<span class="wrong">! FALSE !!</span>`;
+    
+    document.getElementById("widthSize").innerHTML = `
+      <p>
+        <b>${goal} ? </b> ${window.innerWidth} === ${goal} => ${spanText}
+      </p>
+    `;
+  };
+
+  updateSizeText();
+  window.addEventListener("resize", updateSizeText);
+
+</script>
 
 </html>
