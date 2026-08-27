@@ -14,7 +14,7 @@
 <script>
     const pEl = document.querySelector("p");
 
-    fetch("./svgs.json")
+    fetch("jsons/svgs.json")
         .then(response => response.json())
         .then(data => {
             data.forEach(svg => {
