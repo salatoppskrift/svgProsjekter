@@ -25,16 +25,35 @@
 </body>
 <script>
   const updateSizeText = w => {
-    const goal = 970;
+    const goal = 1057;
+    const ww = window.innerWidth; //goal / (goal / 100); // 1057 / (1057 / 10.57)
+    const vW = ww * 0.5; // 1057 / (1057 / 10.57)
+    const h = 400;
     let spanText = ``;
     console.log("meme");
     if (window.innerWidth === goal) spanText = `<span class="correct">Riktig!!</span>`;
-    else if (window.innerWidth > 950 && window.innerWidth < 990) spanText = `<span class="warm">Varmere... ${goal - window.innerWidth}</span>`;
+    else if (window.innerWidth > (goal - 5) && window.innerWidth < (goal + 5)) spanText = `<span class="veryWarm">Varm....!! ${goal - window.innerWidth}</span>`;
+    else if (window.innerWidth > (goal - 20) && window.innerWidth < (goal + 20)) spanText = `<span class="warm">Varmere... ${goal - window.innerWidth}</span>`;
     else spanText = `<span class="wrong">! FALSE !!</span>`;
-    
+
     document.getElementById("widthSize").innerHTML = `
       <p>
         <b>${goal} ? </b> ${window.innerWidth} === ${goal} => ${spanText}
+      </p>
+      <p style="margin-left: 1rem;">
+        <i>calc(var(--wW) - (var(--h) * 0.5)) 35%,</i>
+      </p>
+      <p style="margin-left: 1rem;">
+        <i>calc(${vW} - (${h} * 0.5)) 35%,</i>
+      </p>
+      <p style="margin-left: 1rem;">
+        <i>calc(${vW} - (${h * 0.5})) 35%,</i>
+      </p>
+      <p style="margin-left: 1rem;">
+        <i>${vW - h * 0.5} 35%,</i>
+      </p>
+      <p>
+        ${vW}vW, ${h}px
       </p>
     `;
   };
