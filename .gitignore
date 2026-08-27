@@ -1,3 +1,4 @@
 *.json
 !shareable/*.json
 /bilder
+/jsons
