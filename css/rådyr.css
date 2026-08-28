@@ -9,9 +9,9 @@
   margin: 0;
 }
 
-body {
+/* body {
   background-color: #c2ae96;
-}
+} */
 
 div#widthSize {
   background-color: hsl(91, 84%, 81%);
@@ -62,13 +62,13 @@ div.container {
   height: var(--h);
   position: relative;
   opacity: 100%;
-  background-color: pink;
+  /* background-color: pink; */
 
   &:has(svg) {
     display: block;
     /* background-color: aliceblue; */
-    background-color: #ccb69b;
-    border: 2px solid cadetblue;
+    /* background-color: #ccb69b; */
+    /* border: 2px solid cadetblue; */
   }
 }
 
@@ -158,7 +158,8 @@ div.container {
   }
 
   >svg.deerSecondary {
-    background-color: purple;
+    /* background-color: purple; */
+    background: linear-gradient(hsl(18, 25%, 55%), hsl(18, 39%, 80%), hsl(24, 31%, 57%), hsl(18, 36%, 77%));
     clip-path: polygon(
         /*OUTER PATELLA*/
         calc(var(--wW) + (var(--h) * 0.02)) 52%,
@@ -246,7 +247,8 @@ div.container {
   }
 
   >svg.deerPrimary {
-    background-color: skyblue;
+    /* background-color: skyblue; */
+    background: linear-gradient(hsl(18, 47%, 37%), hsl(18, 49%, 33%), hsl(18, 28%, 59%));
     clip-path: polygon(
         /*right back toe (closest to us)*/
         calc(var(--wW) - (var(--h) * 0.205)) 97.8%,
