@@ -1,4 +1,9 @@
+#file types
 *.json
 !shareable/*.json
+# folders
 /bilder
 /jsons
+
+#actual files
+rådyrTEST.html
