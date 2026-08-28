@@ -1,5 +1,5 @@
 :root {
-  --h: 400px;
+  --h: 40vw;
   --w: 100vw;
   --wW: calc(var(--w) * 0.5);
 }
