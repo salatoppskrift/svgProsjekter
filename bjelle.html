@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+:root {
+  --w: 450px;
+  --wW: calc(var(--w) / 2);
+  --p1: 0%;
+  --p2: 30%;
+  --p3: 35%;
+}
+.contain {
+  position: relative;
+  background: aliceblue;
+  width: var(--w);
+  aspect-ratio: 2/1;
+  >* {
+    position: absolute;
+    scale: 0.9;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+  }
+}
+.bell {
+  transform-origin: 50% 0%;
+/*
+  scale: 0.9;
+  transform: rotate(30deg);
+*/
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(hsl(42, 38%, 50%) 40%, hsl(46, 43%, 73%));
+  animation-name: flippy;
+  clip-path: polygon(
+    45% 100%,
+    32% 96%,
+    27% 91%,
+    25% 85%,
+    26% 83%, /*ny0*/
+    28% 84.5%, /*ny*/
+    30% 82%,
+    32% 75%,
+    35% 28%,
+    42% 10%,
+    49% 5%,
+    49% 0%,
+    /* LEFT SIDE */
+    /* MIDDLE */
+    /* RIGHT SIDE */
+    51% 0%,
+    51% 5%,
+    58% 10%,
+    65% 28%,
+    68% 75%,
+    70% 82%,
+    72% 84.5%, /*ny*/
+    74% 83%, /*ny0*/
+    75% 85%,
+    73% 91%,
+    68% 96%,
+    55% 100%
+  );
+}
+.knock { /*very fucky! How to fix... ergo hvorfor satt --w til 450px, den ser ikke riktig ut på noen annen størrelse*/
+  width: 100%; height: 100%;
+  top: 7rem;
+  background: hsl(42, 38%, 45%);
+  clip-path: circle(5%);
+  transform-origin: 50% -60%;
+  animation-name: fly;
+}
+.ribbon {
+  animation-name: flippy-ribbon;
+  transform-origin: 50% -7%;
+  width: 100%; height: 100%;
+  background: linear-gradient(to right, hsl(190, 20%, 80%), hsl(190, 20%, 70%), hsl(190, 20%, 80%), hsl(190, 20%, 70%), hsl(190, 20%, 80%));
+  scale: 0.2;
+  clip-path: polygon(
+    52% 58%,
+    70% 86%,
+    90% 100%,
+    100% 85%,
+    94% 50%,
+    100% 40%,
+    100% 10%,
+    90% 0%,
+    74% 10%,
+    52% 46%,
+    /*middle REAL*/
+    48% 46%,
+    26% 10%,
+    10% 0%,
+    0% 10%,
+    0% 40%,
+    6% 50%,
+    0% 85%,
+    10% 100%,
+    30% 86%,
+    48% 58%
+  );
+}
+
+@keyframes flippy {
+0% { transform: rotate(30deg); }
+50% { transform: rotate(-30deg); }
+100% { transform: rotate(30deg); }
+}
+@keyframes flippy-ribbon {
+0% { transform: rotate(20deg); }
+50% { transform: rotate(-20deg); }
+100% { transform: rotate(20deg); }
+}
+@keyframes fly {
+0% { transform: rotate(40deg);}
+50% { transform: rotate(-40deg);}
+100% { transform: rotate(40deg);}
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="contain">
+  <svg class="knock">
+    <title>knock</title>
+  </svg>
+  <svg class="bell">
+    <title>bjelle</title>
+  </svg>
+  <svg class="ribbon">
+    <title>sløyfe</title>
+  </svg>
+</div>
+<p id="sangtekst"></p>
+
+</body>
+<script>
+  document.getElementById("sangtekst").innerHTML = (`
+    Glade jul, hellige jul!.
+    Engler daler ned i skjul.
+    Hit de flyver med paradis grønt,.
+    hvor de ser hva for Gud er skjønt.
+    Lønnlig i blant oss de går.
+    Lønnlig i blant oss de går.
+  `).split(".").map(s => s + "<br>").join("");
+</script>
+</html>
