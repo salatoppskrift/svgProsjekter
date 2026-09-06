@@ -128,21 +128,15 @@ div.container {
     background-color: cornflowerblue;
     clip-path: polygon(
         /*SHOULDER*/
-        calc(var(--wW) + (var(--h) * 0.015)) 50%,
-        /*HEART*/
-        calc(var(--wW) + (var(--h) * 0.15)) 50%,
-        calc(var(--wW) + (var(--h) * 0.135)) 55%,
-        calc(var(--wW) + (var(--h) * 0.105)) 57.5%,
-
-        /*FALSE ELBOW FRONT*/
-        calc(var(--wW) + (var(--h) * 0.115)) 75%,
-        /*FOOT*/
-        calc(var(--wW) - (var(--h) * 0.052)) 94%,
-        calc(var(--wW) - (var(--h) * 0.063)) 92%,
-        calc(var(--wW) - (var(--h) * 0.05)) 88%,
-
-        /*FALSE ELBOW FRONT*/
-        calc(var(--wW) + (var(--h) * 0.072)) 75%);
+         50.6% 50%,
+/*HEART*/ 56% 50%,
+55.4% 55%,
+54.2% 57.5%,
+/*FALSE ELBOW FRONT*/ 54.6% 75%,
+/*FOOT*/ 47.92% 94%,
+47.48% 92%,
+48% 88%,
+/*FALSE ELBOW FRONT*/ 52.88% 75%);
   }
 
   >svg.deerSecondary {
