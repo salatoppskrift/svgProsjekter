@@ -75,7 +75,7 @@ div.container {
 div.container {
   >img {
     height: 100%;
-    transform: translateY(-24.5px) translateX(271.5px);
+    transform: translateY(-27.5px) translateX(270px);
     scale: 1.299;
     position: absolute;
     filter: contrast(5) brightness(9);
@@ -86,40 +86,86 @@ div.container {
     height: 100%;
     width: 100%;
     position: absolute;
-    /* opacity: 75%; */
+    opacity: 75%;
   }
 
   >svg.hat {
     background-color: darkolivegreen;
     clip-path: polygon(
         /*behind LEFT ear*/
-        56% 20%,
-57.2% 11%,
-/*TOP OF HAT*/ 60.6% 7%,
-/*OUTER RIGHT TIP OF HAT*/ 64% 14%,
-62% 13%,
-59.6% 13.2%
+        57.075% 11.5%,
+        57.15% 10.9%,
+        /*TOP OF HAT*/
+        60% 6.68%,
+        60.35% 6.5%,
+        60.7% 6.58%,
+        61.2% 7%,
+        61.45% 7.3%,
+        61.7% 8%,
+        /*UPPER DIP OF HAT*/
+        62% 10.8%,
+        62.3% 11.6%,
+        63% 12.11%,
+        63.6% 12.82%,
+        /*OUTER RIGHT TIP OF HAT*/
+        /*BRIM*/
+        63% 12.5%,
+        62.2% 12.7%,
+        61.88% 12.93%,
+        61.7% 12.95%,
+        61.1% 12.605%,
+        60.95% 12.6%,
+        59.9% 13.05%,
+        59.55% 12.9%,
+        /*goes behind LEFT ear closest to eye*/
+        59.4% 12.7%,
+        /*behind LEFT ear, at base of neck*/
+        56.4% 20.22%,
+        56.03% 20.15%,
+        55.99% 20%,
+        56.6% 17.4%,
+        57.02% 14.8%
+        /*END*/
+      );
+  }
+
+  >svg.hatBg {
+    background-color: cadetblue;
+    clip-path: polygon(
+        /*TOP POINT BEHIND SKULL*/
+        60% 10%,
+        /*ANCHOR*/
+        63.6% 12.8%,
+        63.77% 12.78%,
+        /*ANCHOR*/
+        63.6% 14.5%,
+        57.2% 19%,
+        56.4% 20%
         /*END*/
       );
   }
 
   >svg.deerHindLeg {
     background-color: lightblue;
-    clip-path: polygon(
-         36% 65.6%,
-35.6% 67.5%,
-35.8% 69.7%,
-/*SESAMOID BEHIND*/ 41.8% 88%,
-/*TOE TIP*/ 42.4% 93%,
-42.92% 91.8%,
-/*SESAMOID FRONT*/ 42.6% 87%,
-/*INNER PATELLA*/ 38% 72.5%,
-38.8% 65%,
-42% 53%,
-/*HEART*/ 38.4% 53%,
-38.72% 57%,
-38.6% 59%,
-38.4%
+    clip-path: polygon(36% 65.6%,
+        35.6% 67.5%,
+        35.8% 69.7%,
+        /*SESAMOID BEHIND*/
+        41.8% 88%,
+        /*TOE TIP*/
+        42.4% 93%,
+        42.92% 91.8%,
+        /*SESAMOID FRONT*/
+        42.6% 87%,
+        /*INNER PATELLA*/
+        38% 72.5%,
+        38.8% 65%,
+        42% 53%,
+        /*HEART*/
+        38.4% 53%,
+        38.72% 57%,
+        38.6% 59%,
+        38.4%
         /*END*/
       )
   }
@@ -128,75 +174,105 @@ div.container {
     background-color: cornflowerblue;
     clip-path: polygon(
         /*SHOULDER*/
-         50.6% 50%,
-/*HEART*/ 56% 50%,
-55.4% 55%,
-54.2% 57.5%,
-/*FALSE ELBOW FRONT*/ 54.6% 75%,
-/*FOOT*/ 47.92% 94%,
-47.48% 92%,
-48% 88%,
-/*FALSE ELBOW FRONT*/ 52.88% 75%);
+        50.6% 50%,
+        /*HEART*/
+        56% 50%,
+        55.4% 55%,
+        54.2% 57.5%,
+        /*FALSE ELBOW FRONT*/
+        54.6% 75%,
+        /*FOOT*/
+        47.92% 94%,
+        47.48% 92%,
+        48% 88%,
+        /*FALSE ELBOW FRONT*/
+        52.88% 75%);
   }
 
   >svg.deerSecondary {
     /* background-color: purple; */
     background: linear-gradient(hsl(18, 25%, 55%), hsl(18, 39%, 80%), hsl(24, 31%, 57%), hsl(18, 36%, 77%));
     clip-path: polygon(
-         /*OUTER PATELLA*/ 50.8% 52%,
-/*HEART*/ 42% 40%,
-/*HEART*/ 38.32% 60.65%,
-37% 63.2%,
-36% 65.6%,
-35.6% 67.5%,
-35.8% 69.7%,
-/*OUTER PATELLA END*/ /*SESAMOID BEHIND*/ 41.8% 88%,
-/* TOE TIP */ 42.4% 93%,
-42.92% 91.8%,
-/*TOE END*/ /* SESAMOID FRONT */ 42.6% 87%,
-/*SESAMOID END*/ /* INNER PATELLA */ 38% 72.5%,
-/*INNER PATELLA END*/ 42% 48%,
-/*HEART*/ 54.8% 40%,
-58.4% 14%,
-/*BASE*/ 57.72% 8.4%,
-/*MARK!!*/ 57.68% 7.1%,
-57.72% 5.39%,
-57.92% 4.3%,
-58.28% 2.35%,
-58.6% 1.3%,
-58.92% .35%,
-59.32% .18%,
-/*LEFT EAR TIP*/ 59.6% 1.02%,
-59.72% 2%,
-59.8% 5%,
-59.44% 7%,
-/*MARK!!*/ 58.8% 12.5%,
-/*LEFT EAR INNER BASE*/ 60% 14%,
-/*RIGHT EAR INNER BASE*/ 61.92% 10%,
-63% 8%,
-64% 5.5%,
-64.48% 4.3%,
-64.72% 4.2%,
-/*RIGHT EAR TIP 1*/ 64.72% 4.212%,
-/*RIGHT EAR TIP 2*/ 64.8% 4.65%,
-64.8% 6%,
-64.6% 7.5%,
-63.2% 11.5%,
-/*BASE*/ 61.6% 14%,
-56% 50%,
-55.4% 55%,
-54.2% 57.5%,
-/*FALSE ELBOW FRONT*/ 54.6% 75%,
-/*ELBOW FOOT AMEND*/ 52.4% 82.5%,
-49.4% 88.5%,
-/*AMEND END*/ /*FOOT*/ 47.92% 94%,
-47.64% 92.9%,
-47.96% 90.3%,
-50.4% 83%,
-/*FALSE ELBOW BACK*/ 51.2% 81.5%,
-53% 74.9%,
-53.12% 73.5%,
-52.88% 68.9%
+        /*OUTER PATELLA*/
+        50.8% 52%,
+        /*HEART*/
+        42% 40%,
+        /*HEART*/
+        38.32% 60.65%,
+        37% 63.2%,
+        36% 65.6%,
+        35.6% 67.5%,
+        35.8% 69.7%,
+        /*OUTER PATELLA END*/
+        /*SESAMOID BEHIND*/
+        41.8% 88%,
+        /* TOE TIP */
+        42.4% 93%,
+        42.92% 91.8%,
+        /*TOE END*/
+        /* SESAMOID FRONT */
+        42.6% 87%,
+        /*SESAMOID END*/
+        /* INNER PATELLA */
+        38% 72.5%,
+        /*INNER PATELLA END*/
+        42% 48%,
+        /*HEART*/
+        54.8% 40%,
+        58.4% 14%,
+        /*BASE*/
+        57.72% 8.4%,
+        /*MARK!!*/
+        57.68% 7.1%,
+        57.72% 5.39%,
+        57.92% 4.3%,
+        58.28% 2.35%,
+        58.6% 1.3%,
+        58.92% .35%,
+        59.32% .18%,
+        /*LEFT EAR TIP*/
+        59.6% 1.02%,
+        59.72% 2%,
+        59.8% 5%,
+        59.44% 7%,
+        /*MARK!!*/
+        58.8% 12.5%,
+        /*LEFT EAR INNER BASE*/
+        60% 14%,
+        /*RIGHT EAR INNER BASE*/
+        61.92% 10%,
+        63% 8%,
+        64% 5.5%,
+        64.48% 4.3%,
+        64.72% 4.2%,
+        /*RIGHT EAR TIP 1*/
+        64.72% 4.212%,
+        /*RIGHT EAR TIP 2*/
+        64.8% 4.65%,
+        64.8% 6%,
+        64.6% 7.5%,
+        63.2% 11.5%,
+        /*BASE*/
+        61.6% 14%,
+        56% 50%,
+        55.4% 55%,
+        54.2% 57.5%,
+        /*FALSE ELBOW FRONT*/
+        54.6% 75%,
+        /*ELBOW FOOT AMEND*/
+        52.4% 82.5%,
+        49.4% 88.5%,
+        /*AMEND END*/
+        /*FOOT*/
+        47.92% 94%,
+        47.64% 92.9%,
+        47.96% 90.3%,
+        50.4% 83%,
+        /*FALSE ELBOW BACK*/
+        51.2% 81.5%,
+        53% 74.9%,
+        53.12% 73.5%,
+        52.88% 68.9%
         /*END*/
       );
   }
@@ -212,136 +288,208 @@ div.container {
         /*calcenaeus BACK*/
         36.4% 68%,
 
-        /*carpals*/ 39.2% 62%,
-39.28% 60%,
-39% 57%,
-/*TAIL BOTTOM*/ 36.6% 44.6%,
-36.2% 44%,
-35.64% 42.5%,
-35.36% 40%,
-35.5199% 38%,
-36% 36%,
-/*2*/ 37.04% 33.2%,
-38.4% 30.4%,
-39.2% 29%,
-39.4800% 28.9%,
-/*END TAIL SECTION: TOP*/ 40.4% 27.2%,
-/*TAIL BUTT: AMEND*/ /*BUTT SECTION*/ 41.64% 25.25%,
-42.64% 24.87%,
-/*END BUTT SECTION*/ /*SHOULDER START*/ 50.52% 29.1%,
-/*SHOULDER TOP*/ 52.32% 28.28%,
-52.56% 28.26%,
-/*SHOULDER BEND DOWN TO*/ 53.04% 28.7%,
-/*SHOULDER TOP THROAT START: AMEND*/ /*THROAT BASE*/ 53.62% 29.5%,
-53.76% 29.45%,
-/*NECK MIDDLE*/ 55.8% 25.3%,
-/*SKULL BASE*/ 56.72% 21.8%,
-57.6% 18%,
-57.8% 15%,
-57.5199% 12.5%,
-57.76% 9.9%,
-/*EAR LEFT TIP TOP*/ 57.72% 8.4%,
-/*MARK!!*/ 58.04% 10%,
-58.4% 12.5%,
-/*DIP!!!*/ 58.4800% 11.65%,
-58.8% 10%,
-59.44% 7%,
-/*MARK!!*/ 59.4800% 8.74%,
-59.72% 10.4%,
-59.76% 11.5%,
-/*EAR BASE*/ 59.56% 12.3%,
-/*EAR SECTION END*/ 60.4% 12.02%,
-61.6% 12.5%,
-/*BROW SECTION*/ 62% 13.78%,
-62.36% 14.05%,
-/*BROW TOP*/ 62.44% 14.4%,
-/*BROW TOP*/ 62.28% 15.45%,
-62.24% 16.5%,
-/*BROW SECTION END*/ /*FACE DIP*/ 62.8% 19%,
-/*SNOUT SECTION*/ 64.32% 23%,
-64.52% 24.5%,
-64.4% 25%,
-63.8% 25.65%,
-/*END SNOUT SECTION*/ /*MOUTH*/ 63.4% 26.2%,
-/*UNDERSIDE OF JAW*/ 61.8% 25.5%,
-60.92% 26%,
-60.5199% 26.9%,
-/*THROAT START*/ 56.68% 50.5%,
-56.2% 52%,
-/*ELBOW CHEST FRONT BASE*/ 51.2% 59%,
-/*RIGHT FRONT TOE*/ 50.6% 99.5%,
-50% 99.5%,
-/*ELBOW BOWL BASE*/ 48.28% 57%,
-/*BELLY SECTION*/ 48.4% 54%,
-44.8% 49.8%,
-/*END BELLY SECTION*/ /*INNER PELVIS*/ 43.8% 51%,
-/*PATELLA*/ 43.76% 55%,
-43.76% 58%,
-42.8% 62%,
-40.32% 66%,
-39.2% 70%,
-39% 74%);
+        /*carpals*/
+        39.2% 62%,
+        39.28% 60%,
+        39% 57%,
+        /*TAIL BOTTOM*/
+        36.6% 44.6%,
+        36.2% 44%,
+        35.64% 42.5%,
+        35.36% 40%,
+        35.5199% 38%,
+        36% 36%,
+        /*2*/
+        37.04% 33.2%,
+        38.4% 30.4%,
+        39.2% 29%,
+        39.4800% 28.9%,
+        /*END TAIL SECTION: TOP*/
+        40.4% 27.2%,
+        /*TAIL BUTT: AMEND*/
+        /*BUTT SECTION*/
+        41.64% 25.25%,
+        42.64% 24.87%,
+        /*END BUTT SECTION*/
+        /*SHOULDER START*/
+        50.52% 29.1%,
+        /*SHOULDER TOP*/
+        52.32% 28.28%,
+        52.56% 28.26%,
+        /*SHOULDER BEND DOWN TO*/
+        53.04% 28.7%,
+        /*SHOULDER TOP THROAT START: AMEND*/
+        /*THROAT BASE*/
+        53.62% 29.5%,
+        53.76% 29.45%,
+        /*NECK MIDDLE*/
+        55.8% 25.3%,
+        /*SKULL BASE*/
+        56.72% 21.8%,
+        57.6% 18%,
+        57.8% 15%,
+        57.5199% 12.5%,
+        57.76% 9.9%,
+        /*EAR LEFT TIP TOP*/
+        57.72% 8.4%,
+        /*MARK!!*/
+        58.04% 10%,
+        58.4% 12.5%,
+        /*DIP!!!*/
+        58.4800% 11.65%,
+        58.8% 10%,
+        59.44% 7%,
+        /*MARK!!*/
+        59.4800% 8.74%,
+        59.72% 10.4%,
+        59.76% 11.5%,
+        /*EAR BASE*/
+        59.56% 12.3%,
+        /*EAR SECTION END*/
+        60.4% 12.02%,
+        61.6% 12.5%,
+        /*BROW SECTION*/
+        62% 13.78%,
+        62.36% 14.05%,
+        /*BROW TOP*/
+        62.44% 14.4%,
+        /*BROW TOP*/
+        62.28% 15.45%,
+        62.24% 16.5%,
+        /*BROW SECTION END*/
+        /*FACE DIP*/
+        62.8% 19%,
+        /*SNOUT SECTION*/
+        64.32% 23%,
+        64.52% 24.5%,
+        64.4% 25%,
+        63.8% 25.65%,
+        /*END SNOUT SECTION*/
+        /*MOUTH*/
+        63.4% 26.2%,
+        /*UNDERSIDE OF JAW*/
+        61.8% 25.5%,
+        60.92% 26%,
+        60.5199% 26.9%,
+        /*THROAT START*/
+        56.68% 50.5%,
+        56.2% 52%,
+        /*ELBOW CHEST FRONT BASE*/
+        51.2% 59%,
+        /*RIGHT FRONT TOE*/
+        50.6% 99.5%,
+        50% 99.5%,
+        /*ELBOW BOWL BASE*/
+        48.28% 57%,
+        /*BELLY SECTION*/
+        48.4% 54%,
+        44.8% 49.8%,
+        /*END BELLY SECTION*/
+        /*INNER PELVIS*/
+        43.8% 51%,
+        /*PATELLA*/
+        43.76% 55%,
+        43.76% 58%,
+        42.8% 62%,
+        40.32% 66%,
+        39.2% 70%,
+        39% 74%);
   }
+
   >svg.deer {
     background-color: skyblue;
     clip-path: polygon(
-        /*right back toe (closest to us)*/ 41.8% 97.8%,
-41% 98%,
-/*36.4% 68%,
-/*carpals*/ 39.2% 62%,
-39.28% 60%,
-39% 57%,
-/*TAIL BOTTOM*/ 36.6% 44.6%,
-36.2% 44%,
-35.64% 42.5%,
-35.36% 40%,
-35.5199% 38%,
-36% 36%,
-/*2*/ 37.04% 33.2%,
-38.4% 30.4%,
-39.2% 29%,
-39.4800% 28.9%,
-/*END TAIL SECTION: TOP*/ 40.4% 27.2%,
-/*TAIL BUTT: AMEND*/ /*BUTT SECTION*/ 41.64% 25.25%,
-42.64% 24.87%,
-/*END BUTT SECTION*/ /*SHOULDER START*/ 50.52% 29.1%,
-/*SHOULDER TOP*/ 52.32% 28.28%,
-52.56% 28.26%,
-/*SHOULDER BEND DOWN TO*/ 53.04% 28.7%,
-/*SHOULDER TOP THROAT START: AMEND*/ /*THROAT BASE*/ 53.62% 29.5%,
-53.76% 29.45%,
-/*NECK MIDDLE*/ 55.8% 25.3%,
-/*SKULL BASE*/ 56.72% 21.8%,
-57.2% 18%,
-/*UNDER HAT*/ /*NO LEFT EAR BASE BOTTOM AS OF YET*/ /*EAR LEFT TIP TOP*/ 59.2% 0.14%,
-/*BETWEEN EARS*/ 60% 11%,
-62% 10%,
-/*EAR RIGHT TIP TOP*/ 64.68% 4%,
-64.84% 5.5%,
-/*EAR RIGHT END BASE*/ 62% 13.2%,
-/*FACE DIP*/ 62.8% 19%,
-/*SNOUT SECTION*/ 64.32% 23%,
-64.52% 24.5%,
-64.4% 25%,
-63.8% 25.65%,
-/*END SNOUT SECTION*/ /*MOUTH*/ 63.4% 26.2%,
-/*UNDERSIDE OF JAW*/ 61.8% 25.5%,
-60.92% 26%,
-60.5199% 26.9%,
-/*THROAT START*/ 56.68% 50.5%,
-56.2% 52%,
-/*ELBOW CHEST FRONT BASE*/ 51.2% 59%,
-/*RIGHT FRONT TOE*/ 50.6% 99.5%,
-50% 99.5%,
-/*ELBOW BOWL BASE*/ 48.28% 57%,
-/*BELLY SECTION*/ 48.4% 54%,
-44.8% 49.8%,
-/*END BELLY SECTION*/ /*INNER PELVIS*/ 43.8% 51%,
-/*PATELLA*/ 43.76% 55%,
-43.76% 58%,
-42.8% 62%,
-40.32% 66%,
-39.2% 70%,
-39% 74%);
+        /*right back toe (closest to us)*/
+        41.8% 97.8%,
+        41% 98%,
+        /*36.4% 68%,
+/*carpals*/
+        39.2% 62%,
+        39.28% 60%,
+        39% 57%,
+        /*TAIL BOTTOM*/
+        36.6% 44.6%,
+        36.2% 44%,
+        35.64% 42.5%,
+        35.36% 40%,
+        35.5199% 38%,
+        36% 36%,
+        /*2*/
+        37.04% 33.2%,
+        38.4% 30.4%,
+        39.2% 29%,
+        39.4800% 28.9%,
+        /*END TAIL SECTION: TOP*/
+        40.4% 27.2%,
+        /*TAIL BUTT: AMEND*/
+        /*BUTT SECTION*/
+        41.64% 25.25%,
+        42.64% 24.87%,
+        /*END BUTT SECTION*/
+        /*SHOULDER START*/
+        50.52% 29.1%,
+        /*SHOULDER TOP*/
+        52.32% 28.28%,
+        52.56% 28.26%,
+        /*SHOULDER BEND DOWN TO*/
+        53.04% 28.7%,
+        /*SHOULDER TOP THROAT START: AMEND*/
+        /*THROAT BASE*/
+        53.62% 29.5%,
+        53.76% 29.45%,
+        /*NECK MIDDLE*/
+        55.8% 25.3%,
+        /*SKULL BASE*/
+        56.72% 21.8%,
+        57.2% 18%,
+        /*UNDER HAT*/
+        /*NO LEFT EAR BASE BOTTOM AS OF YET*/
+        /*EAR LEFT TIP TOP*/
+        59.2% 0.14%,
+        /*BETWEEN EARS*/
+        60% 11%,
+        62% 10%,
+        /*EAR RIGHT TIP TOP*/
+        64.68% 4%,
+        64.84% 5.5%,
+        /*EAR RIGHT END BASE*/
+        62% 13.2%,
+        /*FACE DIP*/
+        62.8% 19%,
+        /*SNOUT SECTION*/
+        64.32% 23%,
+        64.52% 24.5%,
+        64.4% 25%,
+        63.8% 25.65%,
+        /*END SNOUT SECTION*/
+        /*MOUTH*/
+        63.4% 26.2%,
+        /*UNDERSIDE OF JAW*/
+        61.8% 25.5%,
+        60.92% 26%,
+        60.5199% 26.9%,
+        /*THROAT START*/
+        56.68% 50.5%,
+        56.2% 52%,
+        /*ELBOW CHEST FRONT BASE*/
+        51.2% 59%,
+        /*RIGHT FRONT TOE*/
+        50.6% 99.5%,
+        50% 99.5%,
+        /*ELBOW BOWL BASE*/
+        48.28% 57%,
+        /*BELLY SECTION*/
+        48.4% 54%,
+        44.8% 49.8%,
+        /*END BELLY SECTION*/
+        /*INNER PELVIS*/
+        43.8% 51%,
+        /*PATELLA*/
+        43.76% 55%,
+        43.76% 58%,
+        42.8% 62%,
+        40.32% 66%,
+        39.2% 70%,
+        39% 74%);
   }
 }
