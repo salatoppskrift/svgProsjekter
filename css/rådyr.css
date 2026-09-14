@@ -92,6 +92,62 @@ div.container {
     /* opacity: 75%; */
   }
 
+  >svg.deerEyeShine {
+    background-color: beige;
+    clip-path: polygon(
+      /*TRANSITION*/
+      60.61% 16.7%,
+      60.54% 16.7%,
+      /*SHINE closest to centre*/
+      60.47% 16.15%,
+      /*TRANSITION*/
+      60.5% 15.8%,
+      /*TOP of shine*/
+      60.6% 15.5%,
+      /*PUPIL, closest to the middle of the face side*/
+      60.73% 16.2%,
+      /*BOTTOM shine*/
+      60.69% 16.5%
+      /*END*/
+    );
+  }
+  >svg.deerEye {
+    background-color: hsl(15, 9%, 17%);
+    clip-path: polygon(
+      /*PUPIL, closest to the middle of the face side*/
+      60.73% 16.2%,
+      /*TRANSITION*/
+      60.65% 16.8%,
+      /*PUPIL, BOTTOM*/
+      60.5% 17.3%,
+      60.25% 17.35%,
+      60.05% 17.1%,
+      /*TRANSITION*/
+      60.02% 16.5%,
+      /*PUPIL, ear-side*/
+      60.05% 16%,
+      /*TRANSITION*/
+      59.9% 16.5%,
+      /*EYE CORNER*/
+      59.8% 16.98%,
+      59.75% 17%,
+      59.7% 16.8%,
+      59.7% 16.6%,
+      /*TRANSITION*/
+      59.95% 15.6%,
+      /*EYE TOP*/
+      60.3% 14.85%,
+      60.475% 14.8%,
+      60.65% 15%,
+      /*TRANSITION*/
+      60.85% 15.9%,
+      /*TEARDUCT*/
+      61% 17.3%,
+      60.9% 17.45%
+      /*END*/
+    );
+  }
+
   >svg.hat {
     background-color: darkolivegreen;
     clip-path: polygon(
