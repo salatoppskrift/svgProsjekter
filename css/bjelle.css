@@ -29,7 +29,7 @@
   background: linear-gradient(hsl(42, 38%, 50%) 40%, hsl(46, 43%, 73%));
   animation-name: flippy;
   clip-path: polygon(
-    45% 100%,
+    45% 99.5%,
     32% 96%,
     27% 91%,
     25% 85%,
@@ -55,7 +55,7 @@
     75% 85%,
     73% 91%,
     68% 96%,
-    55% 100%
+    55% 99.5%
   );
 }
 .knock { /*very fucky! How to fix... ergo hvorfor satt --w til 450px, den ser ikke riktig ut på noen annen størrelse*/
