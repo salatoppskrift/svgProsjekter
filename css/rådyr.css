@@ -1,7 +1,5 @@
 :root {
-  --h: 40vw;
   --w: 100vw;
-  --wW: calc(var(--w) * 0.5);
 }
 
 * {
@@ -59,7 +57,7 @@ div#widthSize {
 
 div.container {
   width: var(--w);
-  height: var(--h);
+  aspect-ratio: 5/2;
   position: relative;
   opacity: 100%;
   /* background-color: pink; */
@@ -74,6 +72,7 @@ div.container {
 
 div.container {
 
+  /* background-color: hsla(182, 25%, 50%, 20%); */
   >img {
     height: 100%;
     transform: translateY(-27.5px) translateX(270px);
