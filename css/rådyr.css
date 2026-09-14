@@ -158,10 +158,6 @@ div.container {
       );
   }
 
-  .lowOp {
-    /* opacity: 50%; */
-  }
-
   >svg.hatSeam {
     background-color: hsl(87, 55%, 70%);
     opacity: 30%;
@@ -181,6 +177,77 @@ div.container {
         60% 11.7%,
         60.9% 11.3%,
         61.5% 11.25%
+        /*END*/
+      );
+  }
+
+  >svg.cordRight {
+    background-color: hsl(49, 16%, 79%);
+    clip-path: polygon(
+        /*BEGIN*/
+        58% 15%,
+        /*CORD HAT ORIGIN END*/
+        57.6% 20%,
+        57.5% 23%,
+        57.58% 27%,
+        57.77% 31%,
+        58.7% 39%,
+        60.2% 43.4%,
+        61.2% 44.6%,
+        /*KNOT BEGIN*/
+        62.2% 44.8%,
+        62% 46%,
+        /*KNOT END*/
+        60.7% 45.5%,
+        59.6% 43.54%,
+        58.6% 40.4%,
+        58% 37%,
+        57.4% 30.5%,
+        57.2% 22%,
+        /*CORD HAT ORIGIN BEGIN*/
+        57.6% 15%
+        /*END*/
+      );
+  }
+
+  >svg.cordLeft {
+    background-color: hsl(48, 15%, 87%);
+    clip-path: polygon(
+        /*TRANSITION CURVE FROM KNOT TO CORD ORIGIN*/
+        61.7% 35%,
+        62% 42.1%,
+        62.15% 43.9%,
+        /*KNOT BEGIN*/
+        62.7% 45.5%,
+        62.6% 46%,
+        62% 44.8%,
+        /*TRANSITION*/
+        61.7% 42%,
+        61.4% 35%,
+        /*CORD DISAPPEARS BEHIND SKULL*/
+        61.3% 25%,
+        61.6% 25%
+        /*CORD END*/
+      );
+  }
+
+  >svg.cordKnot {
+    background-color: hsl(50, 15%, 92%);
+    clip-path: polygon(
+        /*LEFT cord thread*/
+        63.8% 47%,
+        63.7% 46%,
+        /*KNOT HEART*/
+        62.3% 45%,
+        /*RIGHT cord thread*/
+        61.8% 44.9%,
+        62.2% 47%,
+        62.4% 48.6%,
+        63.15% 49.9%,
+        63.23% 49.2%,
+        62.8% 47.5%,
+        /*KNOT HEART*/
+        62.7% 46.2%
         /*END*/
       );
   }
@@ -209,14 +276,6 @@ div.container {
         59.56% 12.3%,
         /*CURVe*/
         58.2% 17%
-        /*END*/
-      );
-  }
-
-  >svg.deerEarRightBg {
-    /* background-color: fuchsia;
-    opacity: 30%; */
-    clip-path: polygon(
         /*END*/
       );
   }
@@ -260,6 +319,7 @@ div.container {
         /*END*/
       );
   }
+
   >svg.deerSecondaryFrontLeg {
     /* background-color: purple; */
     background: linear-gradient(hsl(18, 25%, 55%), hsl(18, 39%, 80%), hsl(24, 31%, 57%), hsl(18, 36%, 77%));
