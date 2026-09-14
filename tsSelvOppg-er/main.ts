@@ -1,4 +1,4 @@
-import { turnStringIntoObjectArray, turnObjArrayToCssString } from "./komponenter/rådyrCssGrab";
+import { turnStringIntoObjectArray, turnObjArrayToCssString, changePropsInsideCssChapterArray } from "./komponenter/rådyrCssGrab";
 
 const deerCssStr = `
         /*LEFT EAR INNER BASE*/
@@ -21,7 +21,17 @@ const deerCssStr = `
         /*END*/
 `
 const cssChapterArr = turnStringIntoObjectArray(deerCssStr);
+const changedProps = changePropsInsideCssChapterArray(
+  cssChapterArr,
+  function(x: number) {
+    return x + 2;
+  },
+  function(y: number) {
+    return y;
+  }
+
+);
 
 console.log(cssChapterArr);
-console.log(deerCssStr);
-console.log(turnObjArrayToCssString(cssChapterArr));
+console.log(deerCssStr + "        !! -- original!! Ikke gjort til objekt");
+console.log(turnObjArrayToCssString(changedProps));

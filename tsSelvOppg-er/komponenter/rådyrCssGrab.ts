@@ -1,4 +1,13 @@
-export function turnStringIntoObjectArray(clipPathStr: string) {
+type cssChapter = {
+    chapterTitle: string,
+    chapterProps: propCoordinate[]
+}
+type propCoordinate = {
+    x: number,
+    y: number
+}
+
+export function turnStringIntoObjectArray(clipPathStr: string) : cssChapter[] {
     return clipPathStr
         .split("/*")
         .map(chapter => chapter.trim())
@@ -26,12 +35,12 @@ export function turnObjArrayToCssString(cssChapterArr: cssChapter[]): string {
         .join(", ")
         + "\n        /*END - !! dette er fra objekt til string*/";
 }
+export function changePropsInsideCssChapterArray(cssChapterArr: cssChapter[], xCoorChange: Function, yCoorChange: Function): cssChapter[] {
+    return cssChapterArr.map(chapter => 
+        {
+            const updatingChapterProps = chapter.chapterProps.map(prop => ({... prop, x: xCoorChange(prop.x), y: yCoorChange(prop.y)}));
 
-type cssChapter = {
-    chapterTitle: string,
-    chapterProps: propCoordinate[]
-}
-type propCoordinate = {
-    x: number,
-    y: number
+            return {...chapter, chapterProps: updatingChapterProps}
+        }
+    )
 }
