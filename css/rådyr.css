@@ -158,6 +158,10 @@ div.container {
       );
   }
 
+  .lowOp {
+    /* opacity: 50%; */
+  }
+
   >svg.hatSeam {
     background-color: hsl(87, 55%, 70%);
     opacity: 30%;
@@ -179,6 +183,41 @@ div.container {
         61.5% 11.25%
         /*END*/
       );
+  }
+
+  >svg.deerEarRight {
+    background-color: hsl(18, 47%, 37%);
+    clip-path: polygon(
+      /*EAR BASE OUR LEFT OF EAr*/
+        57.8% 15%,
+        57.5199% 12.5%,
+        57.76% 9.9%,
+        /*EAR LEFT TIP TOP*/
+        57.72% 8.4%,
+        /*MARK!!*/
+        58.04% 10%,
+        58.4% 12.5%,
+        /*DIP!!!*/
+        58.4800% 11.65%,
+        58.8% 10%,
+        59.44% 7%,
+        /*MARK!!*/
+        59.4800% 8.74%,
+        59.72% 10.4%,
+        59.76% 11.5%,
+        /*EAR BASE OUR RIGHT OF EAR*/
+        59.56% 12.3%,
+        /*CURVe*/
+        58.2% 17%
+        /*END*/
+    );
+  }
+  >svg.deerEarRightBg {
+    /* background-color: fuchsia;
+    opacity: 30%; */
+    clip-path: polygon(
+        /*END*/
+    );
   }
 
   >svg.deerHindLeg {
@@ -364,23 +403,8 @@ div.container {
         56.72% 21.8%,
         57.6% 18%,
         57.8% 15%,
-        57.5199% 12.5%,
-        57.76% 9.9%,
-        /*EAR LEFT TIP TOP*/
-        57.72% 8.4%,
-        /*MARK!!*/
-        58.04% 10%,
-        58.4% 12.5%,
-        /*DIP!!!*/
-        58.4800% 11.65%,
-        58.8% 10%,
-        59.44% 7%,
-        /*MARK!!*/
-        59.4800% 8.74%,
-        59.72% 10.4%,
-        59.76% 11.5%,
-        /*EAR BASE*/
-        59.56% 12.3%,
+        /*DELETED MATERIAL MOVED TO RIGHT EAR CLASS*/
+        59% 12.5%,  /*TRANSITIONAL*/
         /*EAR SECTION END*/
         60.4% 12.02%,
         61.6% 12.5%,
