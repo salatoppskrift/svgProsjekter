@@ -188,7 +188,7 @@ div.container {
   >svg.deerEarRight {
     background-color: hsl(18, 47%, 37%);
     clip-path: polygon(
-      /*EAR BASE OUR LEFT OF EAr*/
+        /*EAR BASE OUR LEFT OF EAr*/
         57.8% 15%,
         57.5199% 12.5%,
         57.76% 9.9%,
@@ -210,14 +210,15 @@ div.container {
         /*CURVe*/
         58.2% 17%
         /*END*/
-    );
+      );
   }
+
   >svg.deerEarRightBg {
     /* background-color: fuchsia;
     opacity: 30%; */
     clip-path: polygon(
         /*END*/
-    );
+      );
   }
 
   >svg.deerHindLeg {
@@ -294,41 +295,7 @@ div.container {
         42% 48%,
         /*HEART*/
         54.8% 40%,
-        58.4% 14%,
-        /*BASE*/
-        57.72% 8.4%,
-        /*MARK!!*/
-        57.68% 7.1%,
-        57.72% 5.39%,
-        57.92% 4.3%,
-        58.28% 2.35%,
-        58.6% 1.3%,
-        58.92% .35%,
-        59.32% .18%,
-        /*LEFT EAR TIP*/
-        59.6% 1.02%,
-        59.72% 2%,
-        59.8% 5%,
-        59.44% 7%,
-        /*MARK!!*/
-        58.8% 12.5%,
-        /*LEFT EAR INNER BASE*/
-        60% 14%,
-        /*RIGHT EAR INNER BASE*/
-        61.92% 10%,
-        63% 8%,
-        64% 5.5%,
-        64.48% 4.3%,
-        64.72% 4.2%,
-        /*RIGHT EAR TIP 1*/
-        64.72% 4.212%,
-        /*RIGHT EAR TIP 2*/
-        64.8% 4.65%,
-        64.8% 6%,
-        64.6% 7.5%,
-        63.2% 11.5%,
-        /*BASE*/
-        61.6% 14%,
+        /*DELETED BOTH EARS, MOVED TO A NEW CLASS*/
         56% 50%,
         55.4% 55%,
         54.2% 57.5%,
@@ -351,6 +318,56 @@ div.container {
         /*END*/
       );
   }
+
+  >svg.deerSecondaryRightEar {
+    background: linear-gradient(hsl(18, 25%, 55%), hsl(18, 39%, 80%), hsl(24, 31%, 57%), hsl(18, 36%, 77%));
+    clip-path: polygon(
+        /*BOTTOM?*/
+        58.4% 14%,
+        /*BASE*/
+        57.72% 8.4%,
+        /*MARK!!*/
+        57.68% 7.1%,
+        57.72% 5.39%,
+        57.92% 4.3%,
+        58.28% 2.35%,
+        58.6% 1.3%,
+        58.92% .35%,
+        59.32% .18%,
+        /*LEFT EAR TIP*/
+        59.6% 1.02%,
+        59.72% 2%,
+        59.8% 5%,
+        59.44% 7%,
+        /*MARK!!*/
+        58.8% 12.5%
+        /*LEFT EAR INNER BASE*/
+        );
+  }
+    >svg.deerSecondaryLeftEar {
+    background: linear-gradient(hsl(18, 25%, 55%), hsl(18, 39%, 80%), hsl(24, 31%, 57%), hsl(18, 36%, 77%));
+    clip-path: polygon(
+        /*LEFT EAR INNER BASE*/
+        60% 14%,
+        /*RIGHT EAR INNER BASE*/
+        61.92% 10%,
+        63% 8%,
+        64% 5.5%,
+        64.48% 4.3%,
+        64.72% 4.2%,
+        /*RIGHT EAR TIP 1*/
+        64.72% 4.212%,
+        /*RIGHT EAR TIP 2*/
+        64.8% 4.65%,
+        64.8% 6%,
+        64.6% 7.5%,
+        63.2% 11.5%,
+        /*BASE*/
+        60.6% 14%
+    );
+  }
+
+
 
   >svg.deerPrimary {
     /* background-color: skyblue; */
@@ -404,7 +421,8 @@ div.container {
         57.6% 18%,
         57.8% 15%,
         /*DELETED MATERIAL MOVED TO RIGHT EAR CLASS*/
-        59% 12.5%,  /*TRANSITIONAL*/
+        59% 12.5%,
+        /*TRANSITIONAL*/
         /*EAR SECTION END*/
         60.4% 12.02%,
         61.6% 12.5%,
